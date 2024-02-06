@@ -1,6 +1,6 @@
-async function obter( ){
-    let resposta = await fetch("maça.txt")
-    let convertido = await resposta.text()
-    console.log(convertido)
+async function chamada(){
+    let receber = await fetch("pizza.txt")
+    let pagamento = await receber.text()
+    console.log(pagamento)
 }
-obter()
+chamada()
