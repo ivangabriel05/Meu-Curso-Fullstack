@@ -3,6 +3,5 @@ async function olx(){
   let convertido = await busca.json()
   //for (let x in convertido){
     alert(convertido[1].modelo)
-  }
-//}
+}
 olx()
