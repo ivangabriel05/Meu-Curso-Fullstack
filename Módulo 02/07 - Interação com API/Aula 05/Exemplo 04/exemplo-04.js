@@ -5,9 +5,9 @@
     let procura = await (await fetch("folha.json")).json()
     //alert(buscar)
     for(let x in procura){
-        let indice = parseInt(Math.random()) * 4
+        
         document.body.innerHTML += `
-            <h1 style="color:${[indice]}">  
+            <h1>  
                 ${procura[x]}
             </h1>
         `
