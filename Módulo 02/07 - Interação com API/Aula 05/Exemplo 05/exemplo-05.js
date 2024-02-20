@@ -6,13 +6,14 @@ async function imprimir(){
     let cores = await buscar2.json()
 
     for(let x in tarefas){
-        let indice = parseInt(match.random() * 4)
-
         document.body.innerHTML += `
-            <p style="color:${cores[indice]}">
+
+            <h1 style="color: ${cores[x]}">
                 ${tarefas[x]}
-            </p>
+            </h1>
+
         `
+
     }
 }
 imprimir()

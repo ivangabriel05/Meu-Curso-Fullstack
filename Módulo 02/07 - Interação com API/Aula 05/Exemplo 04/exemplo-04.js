@@ -1,9 +1,9 @@
- async function tabela(){
-    /*let relogar = await fetch("lista.json")
+ /*async function tabela(){
+    let relogar = await fetch("lista.json")
     let obtido = await relogar.json()
-    alert(obtido)*/
+    alert(obtido)
     let procura = await (await fetch("folha.json")).json()
-    //alert(buscar)
+    alert(buscar)
     for(let x in procura){
         
         document.body.innerHTML += `
@@ -13,4 +13,12 @@
         `
     }
 }
-tabela()
+tabela()*/
+async function resolver(){
+    let buscar1 = await fetch("tarefas.json")
+    let tarefas = await buscar1.json()
+
+    for(let x in tarefas){
+        document.body.innerHTML += `<h1> ${x} </h1> `
+    }
+}
