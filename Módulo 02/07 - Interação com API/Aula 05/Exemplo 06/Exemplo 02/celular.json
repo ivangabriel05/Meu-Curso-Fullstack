@@ -1,0 +1,22 @@
+[
+    {
+        "marca":"motorola",
+        "nome":"Edge",
+        "geracao":12,
+        "cor":"preto"
+    },
+
+    {
+        "marca":"Samsung",
+        "nome":"A01 core",
+        "geracao":10,
+        "cor":"Branco"
+    },
+
+    {
+        "marca":"Aplle",
+        "nome":"Iphone",
+        "geracao":13,
+        "cor":"Prata"
+    }
+]
