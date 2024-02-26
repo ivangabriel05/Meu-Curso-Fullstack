@@ -1,16 +1,14 @@
 .lista-card{
-    display: flex;      /* isso faz isso */
-    width: auto;        /* isso faz aquilo */
-    border: 2px solid #000;
-    column-gap: 10px;
-    row-gap: 10px;
-    flex-wrap: wrap;
-    padding: 10px;
-    justify-content: center;
+display:flex;
+flex-wrap: wrap;
+row-gap: 10px;
+column-gap: 10px;
 }
-
 .card{
     border: 1px solid #000;
     width: fit-content;
-    text-align: center;
+    padding: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
