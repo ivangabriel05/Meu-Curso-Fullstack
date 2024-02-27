@@ -6,14 +6,16 @@ async function chamar(){
     
             grupoDiv.innerHTML += `
                 <div class="card">
-                    <img src="${produto.imagem}" width="200px" height="auto">
+                    <img src="${produto.imagem}" width="250px" height="250px">
                     <h3>${produto.marca}</h3>
                     <p>${produto.valor}R$</p>
                     <p>${produto.modelo}</p>
                     <p>${produto.sistemaOperacional}</p>
-       
+            
                 </div>
             `
+
+            
         }
     }
 chamar()
