@@ -1,8 +1,8 @@
 .Lista-card{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display:flex;
-    flex-wrap: wrap ;
-    row-gap: 10px;
+    display:flex; /* serve para deixa os itens soltos */
+    flex-wrap: wrap ; /* serve deixa os items um do lado do outro*/ 
+    row-gap: 10px; /* serve para da espaçamentos entre items*/
     column-gap: 10px;
     
 }
