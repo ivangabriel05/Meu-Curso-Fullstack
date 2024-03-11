@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "pendrive",
+        "descrição":"muitos gigas bytes",
+        "valorComdescoto": 75 ,
+        "valorSemdescoto": 90
+    },
+
+    {
+        "nome": "cabo otg",
+        "descrição":"serve para ligar dois telefones",
+        "valorComdescoto":14 ,
+        "valorSemdescoto": 20
+    },
+
+    {
+        "nome": "garrafa",
+        "descrição":"otima para manter a temperatura ideal",
+        "valorComdescoto":120 ,
+        "valorSemdescoto": 190
+    },
+
+    {
+        "nome": "fone de ouvido",
+        "descrição":"otima qualidade de audio",
+        "valorComdescoto": 58,
+        "valorSemdescoto": 90
+    }
+
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "marca":"havaianas",
+        "preco":"R$90",
+        "cor":"vermelhor",
+        "imagem":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSzUogg2pI9pUvin4dK87Cstne9WmrnaG8WIP4SoVktedHV_OAp4K5-QHBWgxrCshJPnHAGtV7ZhgOzOY_BW7mYhFy-EDASSQwLkE6PSYJYPcuv-_WfDbvxAKIPgOGfsQ6O3TkGP1v5yg&usqp=CAc"
+    },
+
+    {
+        "marca":"nike",
+        "preco":"R$190",
+        "cor":"preta",
+        "imagem":"https://acdn.mitiendanube.com/stores/002/008/930/products/51ac3e07-ded9-4caa-a783-dc882ed56d851-3c52d6917ce7b1d81b16731481968464-640-0.jpeg"
+    },
+
+    {
+        "marca":"kenner",
+        "preco":"R$300",
+        "cor":"azul",
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaT7Xdr4_KxGAlX_vncYKR9EQat6j9GS3gNg&usqp=CAU"
+    }
+]
