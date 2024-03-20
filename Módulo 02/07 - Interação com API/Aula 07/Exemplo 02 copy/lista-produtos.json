@@ -1,31 +1,31 @@
 [
     {
+        "id": 1,
         "nome": "pendrive",
-        "imagem":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRYdbwQbaIJYdxMGoxSwfl_b3wU9CAdOsm5M4cA9qLq-idbl30Fe_sWZCkYortYXe6qxRuXUJ4U8mYvqu-Z71TOYkdOUFCWZkOkyM_h9itJv-PxXOE1g43weRdrozryvzE8yE4VMQ&usqp=CAc",
         "descrição":"muitos gigas bytes",
         "valorComdescoto": 75 ,
         "valorSemdescoto": 90
     },
 
     {
+        "id": 2,
         "nome": "cabo otg",
-        "imagem":"",
         "descrição":"serve para ligar dois telefones",
         "valorComdescoto":14 ,
         "valorSemdescoto": 20
     },
 
     {
+        "id": 3,
         "nome": "garrafa",
-        "imagem":"",
         "descrição":"otima para manter a temperatura ideal",
         "valorComdescoto":120 ,
         "valorSemdescoto": 190
     },
 
     {
+        "id": 4,
         "nome": "fone de ouvido",
-        "imagem":"",
         "descrição":"otima qualidade de audio",
         "valorComdescoto": 58,
         "valorSemdescoto": 90
