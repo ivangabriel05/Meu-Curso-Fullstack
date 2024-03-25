@@ -12,8 +12,8 @@ async function buscar(){
                     <h2>${produto.nome}</h2>
                     <h3>${produto.descrição}</h3>
                     <div class="valores">
-                        <span>${produto.valorComdescoto.toFixed(2)}</span>
-                        <span>${produto.valorSemdescoto.toFixed(2)}</span>
+                        <span>R$ ${produto.valorComdesconto.toFixed(2)}</span>
+                        <span>R$ ${produto.valorSemdesconto.toFixed(2)}</span>
                     </div>
             </div>
         `
@@ -31,3 +31,5 @@ function clicou(){
     window.location.href = "detalhes.html?produto-id=" + elementoId
 }
 buscar()
+// window
+// coleta qual que valor do atributo "data-id" do elemento HTML que acionou o evento de escurta
