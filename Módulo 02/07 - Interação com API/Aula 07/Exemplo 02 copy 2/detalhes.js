@@ -1,8 +1,8 @@
-async function buscarDetalhes(){
+async function mucuraPreta(){
     // Consumo da API
-    let busca = await fetch("lista-produtos.json")
-    let produtos = await busca.json()
-    console.log(produtos)
+    let achado = await fetch("lista-produtos.json")
+    let itens = await achado.json()
+    console.log(itens)
     
 
     // Criou um objeto URLSearchParams e passou
@@ -15,10 +15,10 @@ async function buscarDetalhes(){
     //Criou uma variavel vazia para a atribuição
     let indiceProd
     //usou o for para percorrer toda a lista de produtos do JSON 
-    for(let x in produtos){
+    for(let x in itens){
         //verifica se o ID de cada produto é igual ao ID 
         //coletado na URL da página no navegador
-        if(produtos[x].id == parametroID ){
+        if(itens[x].id == parametroID ){
             //Atribui á variavel vazia, o valor de x, que contém 
             // o indice do produtor que corresponde ao ID da URL  
             indiceProd = x
@@ -28,13 +28,15 @@ async function buscarDetalhes(){
     // Adiciona na TAG BODY do HTML, um código HTML concatenado
     // com valores do objeto produto encontrado
     document.body.innerHTML = `
-       <h3>${produtos[indiceProd].nome}</h3>
-       <h3>${produtos[indiceProd].descrição}</h3>
-       <h3>Valor Com Desconto R$ ${produtos[indiceProd].valorComdesconto}</h3>
-       <h3>Valor Sem Desconto R$ ${produtos[indiceProd].valorSemdesconto}</h3>
-       <img src="${produtos[indiceProd].imagem}" width="250" heigth="250"/>     
+        <div class="card-detalhes">
+        <img src="${itens[indiceProd].imagem}" width="250" heigth="250"/>     
+        <h3>${itens[indiceProd].nome}</h3>
+        <h3>${itens[indiceProd].descrição}</h3>
+        <h4>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h4>
+        <h4>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h4>
+        </div>
     `
     
 }
 
-buscarDetalhes()
+mucuraPreta()
