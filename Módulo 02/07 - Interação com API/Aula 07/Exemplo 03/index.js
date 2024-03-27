@@ -8,7 +8,7 @@ async function buscar(){
         for( let produto of achados){
             grupoDiv.innerHTML += `
                 <div class="card" data-id="${produto.id}">
-                <img src="${produto.imagem[0]}" alt"" width"200" heigth"200px"
+                <img src="${produto.imagem}" alt"" width"200" heigth"200px"
                     <h2>${produto.nome}</h2>
                     <h3>${produto.descrição}</h3>
                     <div class="valores">

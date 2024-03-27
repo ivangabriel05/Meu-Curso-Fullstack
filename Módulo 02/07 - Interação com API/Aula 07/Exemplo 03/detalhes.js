@@ -27,33 +27,14 @@ async function buscarDetalhes(){
     
     // Adiciona na TAG BODY do HTML, um código HTML concatenado
     // com valores do objeto produto encontrado
-    document.getElementById("detalhes").innerHTML += `
-    <img src="${produtos[indiceProd].imagem[0]}" id="frame" width="250" heigth="250"/>     
-    <h3>${produtos[indiceProd].nome}</h3>
-    <h3>${produtos[indiceProd].descrição}</h3>
-    <div class="miniaturas" id="miniaturas">
-    </div>
-    <p>${produtos[indiceProd].descrição}</p>
-    <div class="valores">
-         <h3>Valor Com Desconto R$ ${produtos[indiceProd].valorComdesconto}</h3>
-         <h3>Valor Sem Desconto R$ ${produtos[indiceProd].valorSemdesconto}</h3>
-    </div>  
+    document.body.innerHTML = `
+       <h3>${produtos[indiceProd].nome}</h3>
+       <h3>${produtos[indiceProd].descrição}</h3>
+       <h3>Valor Com Desconto R$ ${produtos[indiceProd].valorComdesconto}</h3>
+       <h3>Valor Sem Desconto R$ ${produtos[indiceProd].valorSemdesconto}</h3>
+       <img src="${produtos[indiceProd].imagem}" width="250" heigth="250"/>     
     `
-    let divMiniaturas = document.getElementById("miniaturas")
-   for(let y of produtos[indiceProd].imagem){
-        divMiniaturas.innerHTML += ` 
-        <img src="${y}"class="mini" width="80" heigth="80" style="border: 1px solid #000"/>
-        `
-   }
-
-   let minizinhas = document.getElementsByClassName("mini")
-   for(let a of minizinhas){
-        a.addEventListener("mouseover", deslize)
-   }
+    
 }
-function deslize(){
-  document.getElementById("frame").src = this.src
-}
-
 
 buscarDetalhes()
