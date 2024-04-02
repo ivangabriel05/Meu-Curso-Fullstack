@@ -38,5 +38,4 @@ async function mucuraPreta(){
     `
     
 }
-
 mucuraPreta()

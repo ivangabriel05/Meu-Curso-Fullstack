@@ -3,18 +3,19 @@
     flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 10px;
-    
 }
 
 .card{
-    border: 1px solid #000;
+    border: 2px solid #0011ff;
     display: flex;
     flex-direction: column;
-    width: fit-content;
     padding: 10px;
     border-radius: 10px;
     width: 250px;
     height: auto;
+    align-items: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .card-detalhes{
     border: 3px solid #000000;
@@ -27,3 +28,67 @@
     height: auto;
     background-color: rgb(22, 179, 147);
 }
+.Navbar2{
+    display: flex;
+    flex-direction: column;
+    background-color: #46ACC2;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    row-gap: 5px;
+    padding: 5px 0px 5px 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+footer{
+    background-color: #46ACC2;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+/* Estilo do menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  /* Estilo do botão */
+  .dropdown-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilo do conteúdo do menu */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Estilo dos itens do menu */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Estilo do item do menu quando hover */
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  /* Exibir o conteúdo do menu quando o botão é hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Estilo do botão quando hover */
+  .dropdown:hover .dropdown-button {
+    background-color: #3e8e41;
+  }
+

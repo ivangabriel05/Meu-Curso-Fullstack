@@ -33,6 +33,22 @@
         "descrição":"de ultima geração com todos componetes instalados e pronto para usor",
         "valorComdesconto": 58,
         "valorSemdesconto": 90
+    },
+    {
+        "id":5,
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8uqgQJZuNwyMz0wOlBfvmf5a_7mDcoSjgG9sYdK4UndUw8pru3j8SwgYEfYMWWrWot9M&usqp=CAU",
+        "nome": "Chinelo",
+        "descrição":"Um bom conforto aos seus pés",
+        "valorComdesconto": 30,
+        "valorSemdesconto": 50
+    },
+    {
+        "id":6,
+        "imagem":"https://images7.memedroid.com/images/UPLOADED821/5ca15e8388ab5.jpeg",
+        "nome": "Galinha",
+        "descrição":"Otima para sua segurança",
+        "valorComdesconto": 90,
+        "valorSemdesconto": 150
     }
-
+ 
 ]
