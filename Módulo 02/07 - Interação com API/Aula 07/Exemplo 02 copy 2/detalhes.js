@@ -1,41 +1,55 @@
-async function mucuraPreta(){
+async function mucuraPreta() {
     // Consumo da API
-    let achado = await fetch("lista-produtos.json")
-    let itens = await achado.json()
-    console.log(itens)
+    let resposta = await fetch("lista-produtos.json");
+    let itens = await resposta.json();
     
 
-    // Criou um objeto URLSearchParams e passou
-    //a coleta dos paramentros da URL nele.
-    let parametros = new URLSearchParams(window.location.search)
+    // Criando um objeto URLSearchParams e obtendo os parâmetros da URL
+    let parametros = new URLSearchParams(window.location.search);
 
-    // Obteve do parametro "produto-id", o seu valor
-    let parametroID =parametros.get("produto-id")
+    // Obtendo o valor do parâmetro "produto-id"
+    let parametroID = parametros.get("produto-id");
 
-    //Criou uma variavel vazia para a atribuição
-    let indiceProd
-    //usou o for para percorrer toda a lista de produtos do JSON 
-    for(let x in itens){
-        //verifica se o ID de cada produto é igual ao ID 
-        //coletado na URL da página no navegador
-        if(itens[x].id == parametroID ){
-            //Atribui á variavel vazia, o valor de x, que contém 
-            // o indice do produtor que corresponde ao ID da URL  
-            indiceProd = x
+    // Criando uma variável vazia para atribuição
+    let indiceProd;
+    // Percorrendo a lista de produtos do JSON
+    for (let x in itens) {
+        // Verificando se o ID de cada produto é igual ao ID coletado na URL
+        if (itens[x].id == parametroID) {
+            // Atribuindo à variável vazia o valor de x, que contém o índice do produto correspondente ao ID da URL
+            indiceProd = x;
         }
     }
-    
-    // Adiciona na TAG BODY do HTML, um código HTML concatenado
-    // com valores do objeto produto encontrado
+
+    // Adicionando HTML dinâmico ao corpo do documento com base no produto encontrado
     document.body.innerHTML = `
         <div class="card-detalhes">
-        <img src="${itens[indiceProd].imagem}" width="250" heigth="250"/>     
-        <h3>${itens[indiceProd].nome}</h3>
-        <h3>${itens[indiceProd].descrição}</h3>
-        <h4>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h4>
-        <h4>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h4>
+            <img src="${itens[indiceProd].imagem}" id="frame" width="250" height="250"/>
+            <div class="minituras" id="miniaturas">
+            </div>  
+            <h3>${itens[indiceProd].nome}</h3>
+            <h4>${itens[indiceProd].descricao}</h4>
+            <h5>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h5>
+            <h6>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h6>
         </div>
     `
     
+    let divMiniaturas = document.getElementById("miniaturas")
+     for(let y of itens[indiceProd].imagem){
+          divMiniaturas.innerHTML += ` 
+          <img src="${y}" class="mini" width="80" heigth="80" style="border: 1px solid #000"/>
+          `
+    }
+    
+    let minizinhas = document.getElementsByClassName("mini");
+    for (let a of minizinhas) {
+        a.addEventListener("mouseover", deslize); // Supondo que 'deslize' esteja definido em outro lugar
+    }
+   
 }
+
+function deslize(){
+    document.getElementById("frame").src = this.src
+}
+
 mucuraPreta()
