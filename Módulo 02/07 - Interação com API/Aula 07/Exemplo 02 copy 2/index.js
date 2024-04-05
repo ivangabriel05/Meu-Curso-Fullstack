@@ -11,8 +11,8 @@ async function buscarProdutos() {
                   <h2>${produto.nome}</h2>
                   <h3>${produto.descrição}</h3>
                   <div class="valores" id="valores">
-                  <h4>R$ ${produto.valorComdesconto.toFixed(2)}</h4>
-                      <h5>R$ ${produto.valorSemdesconto.toFixed(2)}</h5>
+                  <h3>R$${produto.valorComdesconto.toFixed(2)}</h3>
+                      <h3>R$ ${produto.valorSemdesconto.toFixed(2)}</h3>
                   </div>
               </div>`
       }

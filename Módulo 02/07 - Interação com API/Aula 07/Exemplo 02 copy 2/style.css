@@ -6,17 +6,26 @@
 }
 
 .card{
-    border: 2px solid #0011ff;
+    border: 2px solid #0011ff; 
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 10px; 
     border-radius: 10px;
     width: 250px;
     height: auto;
     align-items: center;
     font-style: italic;
     font-family: Arial, Helvetica, sans-serif;
+    color: #4CAF50;
 }
+
+h2{
+  color: #0044ff;
+  border: 1px solid #ccc; /* Adicionei uma borda apenas para visualização */
+  padding: 0; /* Removendo o preenchimento interno */
+  margin: 0; /* Removendo as margens */
+}
+
 .card-detalhes{
     border: 3px solid #000000;
     display: flex;
@@ -28,30 +37,38 @@
     height: auto;
     background-color: rgb(22, 179, 147);
 }
+
 .Navbar2{
     display: flex;
     flex-direction: column;
     background-color: #46ACC2;
     color: rgb(0, 0, 0);
     font-family: sans-serif;
-    row-gap: 5px;
-    padding: 5px 0px 5px 16px;
+    row-gap: 10px;
+    /* padding: 5px 0px 5px 16px; */
     margin-bottom: 10px;
     text-align: center;
+    border: 1px solid #ccc; /* Adicionei uma borda apenas para visualização */
+    /* padding: 0px; /* Removendo o preenchimento interno */
+    /* margin: 0px; Removendo as margens */mn 
 }
+
 footer{
     background-color: #46ACC2;
     color: rgb(0, 0, 0);
     text-align: center;
 }
+
 /* Estilo para o botão do menu suspenso */
 .dropdown-button {
   background-color: #4CAF50;
+  display: flex;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  row-gap: 10px;
 }
 
 /* Estilo para o conteúdo do menu suspenso */
@@ -74,6 +91,15 @@ footer{
 
 /* Altera a cor dos links do menu suspenso quando o mouse passa sobre eles */
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #ff0000;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+}
+
+footer{
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
 }
 

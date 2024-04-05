@@ -28,9 +28,9 @@ async function mucuraPreta() {
             <div class="minituras" id="miniaturas">
             </div>  
             <h3>${itens[indiceProd].nome}</h3>
-            <h4>${itens[indiceProd].descricao}</h4>
-            <h5>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h5>
-            <h6>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h6>
+            <h4>${itens[indiceProd].descrição}</h4>
+            <h3>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h3>
+            <h3>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h3>
         </div>
     `
     
