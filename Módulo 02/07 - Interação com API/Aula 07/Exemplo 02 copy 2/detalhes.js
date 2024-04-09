@@ -29,8 +29,8 @@ async function mucuraPreta() {
             </div>  
             <h3>${itens[indiceProd].nome}</h3>
             <h4>${itens[indiceProd].descrição}</h4>
-            <h3>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto}</h3>
-            <h3>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto}</h3>
+            <h3>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto.toFixed(2).replace(".",",")}</h3>
+            <h3>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto.toFixed(2).replace(".",",")}</h3>
         </div>
     `
     

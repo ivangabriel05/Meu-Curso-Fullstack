@@ -38,18 +38,6 @@
         "valorSemdesconto": 190
     },
 
-    {  
-         "id":4,
-        "imagem":[
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa15IbrAK4MGmX4_zRc6MvkQOETbfJHh4c_0srA99K7Q&s",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIky28EPQUSYyaiYuF_CprKA-oaMgZFr7-Wg&s",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkGDQd1g15G7SiQzcHzu7h0ZMnceuSeJS72A&s"
-        ],
-        "nome": "Chinelo",
-        "descrição":"Um bom conforto aos seus pés",
-        "valorComdesconto": 58,
-        "valorSemdesconto": 90
-    },
     {
         "id":5,
         "imagem":[

@@ -14,7 +14,8 @@ async function buscarProdutos() {
                   <h3>R$${produto.valorComdesconto.toFixed(2)}</h3>
                       <h3>R$ ${produto.valorSemdesconto.toFixed(2)}</h3>
                   </div>
-              </div>`
+              </div>
+              `
       }
 
       const divsCards = document.querySelectorAll(".card")

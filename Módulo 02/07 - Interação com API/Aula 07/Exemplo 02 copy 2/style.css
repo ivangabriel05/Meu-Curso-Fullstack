@@ -1,8 +1,17 @@
+body{
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 .dell-card{
     display: flex;
     flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 10px;
+    width: 90%;
+    align-self: center;
 }
 
 .card{
@@ -45,12 +54,11 @@ h2{
     color: rgb(0, 0, 0);
     font-family: sans-serif;
     row-gap: 10px;
-    /* padding: 5px 0px 5px 16px; */
-    margin-bottom: 10px;
+    padding: 5px 0px 5px 16px; 
     text-align: center;
     border: 1px solid #ccc; /* Adicionei uma borda apenas para visualização */
-    /* padding: 0px; /* Removendo o preenchimento interno */
-    /* margin: 0px; Removendo as margens */mn 
+    padding: 0px; /* Removendo o preenchimento interno */
+    margin: 0px; /*Removendo as margens */
 }
 
 footer{
@@ -69,6 +77,7 @@ footer{
   border: none;
   cursor: pointer;
   row-gap: 10px;
+  width: 5%;
 }
 
 /* Estilo para o conteúdo do menu suspenso */
@@ -101,5 +110,27 @@ footer{
   color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   font-style: oblique;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0px;
+  padding: 10px 0px 10px 10px;
+  
+}
+
+.menu li {
+  display: inline;
+  
+}
+
+.menu li a {
+  text-decoration: none;
+  padding: 10px;
+  
+}
+
+.menu li a:hover {
+  background-color: #ccc;
 }
 
