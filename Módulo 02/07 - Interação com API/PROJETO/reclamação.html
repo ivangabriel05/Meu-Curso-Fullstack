@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reclamações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="container">
+    <h1 class="title">Formulário de Reclamações</h1>
+    <form action="#" method="POST" class="complaint-form">
+        <label for="nome" class="label">Nome:</label>
+        <input type="text" id="nome" name="nome" class="input" required>
+
+        <label for="email" class="label">Email:</label>
+        <input type="text" id="email" name="email" class="input" required>
+
+        <label for="assunto" class="label">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" class="input" required>
+
+        <label for="mensagem" class="label">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" class="textarea" required></textarea>
+
+        <input type="submit" value="Enviar Reclamação" class="submit-btn">
+    </form>
+</div>
+
+</body>
+</html>

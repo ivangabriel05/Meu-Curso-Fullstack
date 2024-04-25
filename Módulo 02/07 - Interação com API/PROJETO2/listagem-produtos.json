@@ -1,0 +1,27 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "nome": "Camiseta Estampada",
+        "descricao": "Camiseta de algodão com estampa exclusiva",
+        "preco": 39.99,
+        "imagem": "camiseta.jpg"
+      },
+      {
+        "id": 2,
+        "nome": "Calça Jeans",
+        "descricao": "Calça jeans de corte reto e lavagem clara",
+        "preco": 59.99,
+        "imagem": "calca-jeans.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Tênis Esportivo",
+        "descricao": "Tênis esportivo confortável e leve",
+        "preco": 79.99,
+        "imagem": "tenis-esportivo.jpg"
+      }
+      
+    ]
+  }
+  

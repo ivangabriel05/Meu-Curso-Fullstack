@@ -2,7 +2,7 @@ async function mucuraPreta() {
     // Consumo da API
     let resposta = await fetch("lista-produtos.json");
     let itens = await resposta.json();
-    
+
 
     // Criando um objeto URLSearchParams e obtendo os parâmetros da URL
     let parametros = new URLSearchParams(window.location.search);
@@ -23,33 +23,32 @@ async function mucuraPreta() {
 
     // Adicionando HTML dinâmico ao corpo do documento com base no produto encontrado
     document.body.innerHTML = `
-        <div class="card-detalhes">
-            <img src="${itens[indiceProd].imagem}" id="frame" width="250" height="250"/>
-            <div class="minituras" id="miniaturas">
-            </div>  
-            <h3>${itens[indiceProd].nome}</h3>
-            <h4>${itens[indiceProd].descrição}</h4>
-            <h3>Valor Com Desconto R$ ${itens[indiceProd].valorComdesconto.toFixed(2).replace(".",",")}</h3>
-            <h3>Valor Sem Desconto R$ ${itens[indiceProd].valorSemdesconto.toFixed(2).replace(".",",")}</h3>
-        </div>
-    `
-    
+    <div class="card-detalhes">
+        <img src="${itens[indiceProd].imagem[0]}" id="frame" width="250" height="250"/>
+        <div class="minituras" id="miniaturas">
+        </div>  
+        <h3>${itens[indiceProd].nome}</h3>
+        <h4>${itens[indiceProd].descrição}</h4>
+        <h3>R$ ${itens[indiceProd].valorComdesconto.toFixed(2).replace(".", ",")}</h3>
+        <h3>R$ ${itens[indiceProd].valorSemdesconto.toFixed(2).replace(".", ",")}</h3>
+    </div>
+`
+
     let divMiniaturas = document.getElementById("miniaturas")
-     for(let y of itens[indiceProd].imagem){
-          divMiniaturas.innerHTML += ` 
+    for (let y of itens[indiceProd].imagem) {
+        divMiniaturas.innerHTML += ` 
           <img src="${y}" class="mini" width="80" heigth="80" style="border: 1px solid #000"/>
           `
     }
-    
+
     let minizinhas = document.getElementsByClassName("mini");
     for (let a of minizinhas) {
         a.addEventListener("mouseover", deslize); // Supondo que 'deslize' esteja definido em outro lugar
     }
-   
+
 }
 
-function deslize(){
+function deslize() {
     document.getElementById("frame").src = this.src
 }
-
 mucuraPreta()

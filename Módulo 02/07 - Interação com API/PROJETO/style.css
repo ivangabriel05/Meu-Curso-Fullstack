@@ -1,0 +1,372 @@
+html{
+  height: 100%;  
+}
+
+body {
+  /* margin: 0px; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-image: url("https://i0.wp.com/portaldovicio.com.br/wp-content/uploads/2023/10/Como-personalizar-o-plano-de-fundo-no-seu-PS5.webp?resize=740%2C416&ssl=1");
+}
+
+.dell-card {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 90%;
+  align-self: center;
+  align-content: center;
+}
+
+.card {
+  border: 2px solid #0011ff;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  width: 250px;
+  align-items: center;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4CAF50;
+  background-color: #000000;
+  opacity: 80%;
+}
+
+.titulo {
+  color: #0044ff;
+  border: 1px solid #ccc;
+  /* Adicionei uma borda apenas para visualização */
+  padding: 0;
+  /* Removendo o preenchimento interno */
+  margin: 0;
+  /* Removendo as margens */
+  background-color: #000e12;
+  padding: 15px 15px 15px 15px;
+  font-size: 24px;
+}
+
+.card-detalhes {
+  margin: 20px;
+  border: 3px solid #000000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  row-gap: 10px;
+  border-radius: 10px;
+  width: 280px;
+  height: 60%;
+  background-color: rgb(22, 179, 147);
+}
+
+.Navbar2 {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  row-gap: 10px;
+  text-align: center;
+  margin: 0px;
+  /*Removendo as margens */
+  padding: 0px 20px;
+  color: #ffffff;
+}
+
+footer {
+  position: fixed; /* ou position: absolute; */
+  bottom: 0;
+  width: 100%;
+  background-color: #003e7c; /* cor de fundo do footer */
+  padding: 20px; /* espaçamento interno do footer */
+  display: flex;
+  justify-content: center; /* Alinha o conteúdo horizontalmente */
+  align-items: center; /* Alinha o conteúdo verticalmente */
+}
+
+/* Estilo para o botão do menu suspenso */
+.menuButton {
+  margin: 5px;
+  background-color: #000000;
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  row-gap: 10px;
+  padding: 10px 20px 10px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #00f7ff;
+  border: 1px solid #00ff2a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Estilo para os links dentro do menu suspenso */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Altera a cor dos links do menu suspenso quando o mouse passa sobre eles */
+.dropdown-content a:hover {
+  background-color: #ff0000;
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: initial;
+}
+
+footer {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: #46ACC2;
+}
+
+.menu li {
+  display: inline;
+
+}
+
+.menu li a {
+  text-decoration: none;
+  padding: 10px;
+
+
+}
+
+.menu li a:hover {
+  background-color: #ccc;
+  color: #ffcc00;
+  /* Cor do texto ao passar o mouse */
+  text-decoration: underline;
+  /* Adiciona sublinhado ao passar o mouse */
+}
+
+/*2 HTML chama no zap  */
+/* Estilos gerais */
+.pagina-contatos {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info h2 {
+  color: #007bff;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.contact-info p:first-child {
+  font-weight: bold;
+}
+
+/*3 HTML reclamação  */
+/* Estilo para o contêiner principal */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título */
+.title {
+  text-align: center;
+  color: #333;
+}
+
+/* Estilo para o formulário */
+.complaint-form {
+  margin-top: 20px;
+}
+
+/* Estilo para as entradas de texto */
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Para incluir o padding e a borda no tamanho total */
+}
+
+/* Estilo para a área de texto */
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Para incluir o padding e a borda no tamanho total */
+}
+
+/* Estilo para o botão de envio */
+.submit-btn {
+  width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilo para o botão de envio quando o cursor está sobre ele */
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para as etiquetas dos campos */
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* teladelogin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.conteine-body {
+  background: url("https://images.unsplash.com/photo-1429704658776-3d38c9990511?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFuZHNjYXBlfHx8fHx8MTcxMzM3MzMyMQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.container-div{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+h1{
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+
+.input-container{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-container input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(255, 255, 255, .2);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-container input::placeholder{
+  color: #fff;
+}
+
+.input-container img{
+  position: absolute;
+  right: 24px;
+  top: 20%;
+  margin-top: 5px;
+}
+
+.input-container a{
+  font-size: 16px;
+  margin-top: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.input-container a:hover{
+  text-decoration: underline;
+}
+
+.submit-button {
+  width: 100%;
+  height: 50px;
+  background-color: #5100b5;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  margin: 24px;
+  margin-left: auto;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
+
+.submit-button:hover{
+  background-color: #0011ff;
+}
+
+.registre-link {
+  text-align: center;
+  margin:20px 0;
+}
+
+.registre-link p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.registre-link p a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.registre-link p a:hover{
+  text-decoration:underline ;
+}

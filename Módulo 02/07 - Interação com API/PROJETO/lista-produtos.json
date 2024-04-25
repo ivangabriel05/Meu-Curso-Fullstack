@@ -1,0 +1,133 @@
+[
+    {   
+        "id":1,
+        "imagem":[
+            "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/peripherals/alienware/peripherals/alienware-320m-mouse/assets/mouse-alienware-aw320m-black-gallery-5.psd?fmt=pjpg&pscan=auto&scl=1&wid=2159&hei=1540&qlt=100,1&resMode=sharp2&size=2159,1540&chrss=full&imwidth=5000",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9SYBK0m9NKy1iq0dKgpPLRNKEaTAtEmjJ0g&s",
+            "https://m.media-amazon.com/images/I/61lCLrCtuhL._AC_UF894,1000_QL80_.jpg"
+        ],
+        "nome": "mouse",
+        "descrição":"melhores do momento",
+        "valorComdesconto": 75 ,
+        "valorSemdesconto": 90
+    },
+
+    {
+        "id":2,
+        "imagem":[
+            "https://tiffany.vtexassets.com/arquivos/ids/155744/pulseira-de-contas-return-to-tiffany-em-prata-de-lei-com-diamante-69683886_1.jpg?v=638224350870630000",
+            "https://dcdn.mitiendanube.com/stores/001/093/638/products/estoque-284-b1-662bf14a5abbbe89bc16271461486134-1024-1024.jpg",
+            "https://cdnimg.etiquetaunica.com.br/products/pulseira-tiffany-e-co.-coracao-bco24_335180.jpg"
+        ],
+        "nome": "pulseira",
+        "descrição":"Pulseiras de prata",
+        "valorComdesconto":14 ,
+        "valorSemdesconto": 20
+    },
+
+    {   
+        "id":3,
+        "imagem": [
+            "https://m.media-amazon.com/images/I/61+J3sskSxL._AC_SY300_SX300_.jpg",
+            "https://kallan.vteximg.com.br/arquivos/ids/300300-1140-1140/04090006_002_1-CHI-UNISEX-VICTORI-SHOWER-SLIDE-CZ7836.jpg?v=637871143323400000",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKHoZcmhiO9W_zfvEEEojDKZntjeDs7UskEA&s"
+        ],
+        "nome": "teclado",
+        "descrição":"Ideal para games",
+        "valorComdesconto":120 ,
+        "valorSemdesconto": 190
+    },
+
+    {
+        "id":5,
+        "imagem":[
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8uqgQJZuNwyMz0wOlBfvmf5a_7mDcoSjgG9sYdK4UndUw8pru3j8SwgYEfYMWWrWot9M&usqp=CAU",
+            "https://maze.cdn.plataformaneo.com.br/produto/multifotos/hd/20211025094947_9105990895_DZ.jpg",
+            "https://kallan.vteximg.com.br/arquivos/ids/300300-1140-1140/04090006_002_1-CHI-UNISEX-VICTORI-SHOWER-SLIDE-CZ7836.jpg?v=637871143323400000"
+        ],
+        "nome": "Chinelo",
+        "descrição":"Um bom conforto",
+        "valorComdesconto": 30,
+        "valorSemdesconto": 50
+    },
+    
+    {
+        "id":6,
+        "imagem":[
+            "https://m.media-amazon.com/images/I/91WR8GpJUeL._AC_UF350,350_QL80_.jpg",
+            "https://images7.memedroid.com/images/UPLOADED821/5ca15e8388ab5.jpeg",
+            "https://s2-oglobo.glbimg.com/7D30yTTbQpqM-Js249OCaVMMvTA=/0x0:480x569/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/p/N/Pp1QNWRiyz2NMugwnX5w/whatsapp-image-2023-01-25-at-20.36.45.jpeg"
+        ],
+        "nome": "Galinha",
+        "descrição":"Otima segurança",
+        "valorComdesconto": 90,
+        "valorSemdesconto": 150
+    },
+    
+    {
+        "id":7,
+        "imagem":[
+            "https://i.pinimg.com/736x/69/75/3c/69753cfda81b3017074af87c6a06e32a.jpg",
+            "https://i.pinimg.com/474x/a5/39/ba/a539ba477a597dae8d6e2e0ef8147e90.jpg",
+            "https://i.pinimg.com/474x/3a/be/09/3abe0950eef761bbcdc0896849b63cfa.jpg"
+        ],
+        "nome": "pitbulls",
+        "descrição":"adestrados desde filhotes",
+        "valorComdesconto": 500,
+        "valorSemdesconto": 1000
+    },
+    
+    {
+        "id":8,
+        "imagem":[
+            "https://images.tcdn.com.br/img/img_prod/1077973/camisa_nike_dri_fit_academy_1465_1_89dd8834737dd6e17f55c53a99f8accc.jpg",
+            "https://trilhaesportes.fbitsstatic.net/img/p/camiseta-nike-dri-fit-academy-23-masculina-azul-marinho-72271/276694-1.jpg?w=800&h=800&v=no-value",
+            "https://static.netshoes.com.br/produtos/camisa-nike-academy-top-ss-masculina/57/HZM-4350-257/HZM-4350-257_zoom1.jpg?ts=1594138461"
+        ],
+        "nome": "Camisas",
+        "descrição":"marca peruana  ",
+        "valorComdesconto": 90,
+        "valorSemdesconto": 150
+    },
+    
+    {
+        "id":9,
+        "imagem":[
+            "https://hondafreeway.com.br/wp-content/uploads/2023/07/NXR160_Branca.png   ",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhn3E5q_qI7SF23W_QzRC637rotmJqtKj3-zRUYcseSX_C2RDfqTYQsA6NV6m5W8j6iQ&usqp=CAU",
+            "https://i.pinimg.com/originals/c1/56/ee/c156eecb11ca69631cab592fd44c3bed.jpg"
+        ],
+        "nome": "Motos 160",
+        "descrição":"Do ano 0KM",
+        "valorComdesconto": 15000,
+        "valorSemdesconto": 25000
+    },
+    
+    {
+        "id":10,
+        "imagem":[
+            "https://i5.walmartimages.com.mx/mg/gm/3pm/images/product-images/img_large/00081029602300l.jpg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMAznn-ZoU791QlOyM_FKuVcLf0VKrqv2IaSu7fHAxMMetJBWpBv9q4tu43_QHj5wK7o&usqp=CAU",
+            "https://precio.com.co/wp-content/uploads/smartphones-y-celulares/caterpillar/celular-cat-s41-precio.webp"
+        ],
+        "nome": "Celulares",
+        "descrição":"Ultima geração",
+        "valorComdesconto": 90,
+        "valorSemdesconto": 150
+    },
+    
+    {
+        "id":11,
+        "imagem":[
+            "https://cdn.mos.cms.futurecdn.net/hcWa2MEHXzX6JDqjxdCQda-1200-80.jpg",
+            "https://www.cnet.com/a/img/resize/81cd12e6b5591c067add0ed269bb538f8c32337a/hub/2022/10/24/13ad0f4b-dfa6-43f5-a652-2eb151574131/meta-quest-pro-vr-8099.jpg?auto=webp&fit=crop&height=675&width=1200",
+            "https://assets.mofoprod.net/network/images/Meta-QuestPro.original.jpg"
+        ],
+        "nome": "meta quest",
+        "descrição":"Otima resolução",
+        "valorComdesconto": 555.55,
+        "valorSemdesconto": 999.99
+    } 
+
+ 
+]

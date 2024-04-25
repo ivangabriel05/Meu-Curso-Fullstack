@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="conteine-body">
+    <div class="container-div">
+        <form class="login-form" onsubmit="return validateForm()">
+            <h1>Entrar na plataforma</h1>
+            <div class="input-container">
+                <input id="email" class="email-input" placeholder="Email" type="email" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1"/>
+            </div>
+
+            <div class="input-container">
+                <input id="password" class="password-input" placeholder="Senha" type="password" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/lock--v1.png" alt="lock--v1"/>
+                <a href="#">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="submit-button">Entrar</button>
+
+            <div class="registre-link">
+                <p>Não está cadastrado ? <a href="#">Cadastrar</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="logged-in-content hidden">
+        <!-- Conteúdo da página após o login -->
+        <!-- Aqui você pode colocar o conteúdo da página pós-login -->
+        
+        </footer>
+    </div>
+</body>
+    <script src="index.js"></script>
+</html>
