@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h4>
+        Sua Lista de Compras de Plantas:
+    </h4>
+    <ul>
+        {% for i in plantas %}
+            <li>
+                Nome: {{ i.nome }} | {{ i.tipo }} 
+            </li>
+        {% endfor %} 
+    </ul>
+    <a href="{% url "pg_inicial" %}">index</a>
+</body>
+</html>

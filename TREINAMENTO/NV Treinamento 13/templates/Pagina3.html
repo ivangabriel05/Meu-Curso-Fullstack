@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <body>
+        <a href="{% url "index" %}">index</a>
+        <h3>
+        Sua Lista De Compras Sera Listada Aqui:
+        </h3>
+
+        <ul>
+            {% for y in Compras %}
+                <li>
+                    NOME : {{ y.nome }} | {{ y.sexo }} 
+                </li>
+            {% endfor %} 
+        </ul>
+    </body>
+</html>

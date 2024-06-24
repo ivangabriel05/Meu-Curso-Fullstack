@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <body>
+        <a href="{% url "index" %}">index</a>
+        <h3>
+            Seus Usuario Serão Listados Aqui:
+        </h3>
+
+        <ul>
+            {% for z in Usuarios %}
+                <li>
+                    NOME : {{ z.nome }} |<a href="{{ z.arquivo.url }}">Arquivo</a>  
+                </li>
+            {% endfor %} 
+        </ul>
+    </body>
+</html>

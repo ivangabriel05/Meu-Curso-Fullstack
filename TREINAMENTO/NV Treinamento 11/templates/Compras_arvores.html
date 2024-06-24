@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h3>
+        Sua Lista de Compras de Arvores:
+    </h3>
+
+    <ul>
+        {% for i in arvore %}
+            <li>
+                Nome: {{ i.nome }} | {{ i.tempo }} 
+            </li>
+        {% endfor %} 
+    </ul>
+</body>
+</html>

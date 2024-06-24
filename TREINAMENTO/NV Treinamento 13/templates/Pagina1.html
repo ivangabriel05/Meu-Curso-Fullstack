@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <body>
+        <a href="{% url "index" %}">index</a>
+        <h3>
+            Seus Cliente Serão Listados Aqui:
+        </h3>
+
+        <ul>
+            {% for x in Cliente %}
+                <li> 
+                    {{ x.nome }} | <a href="{{ x.foto.url }} ">Abrir</a> <img src="{{ x.foto.url }}" width="90" heigth="90"> 
+                </li>
+            {% endfor %} 
+        </ul>
+    </body>
+</html>
