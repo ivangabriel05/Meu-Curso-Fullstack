@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h3>Lista de Encomendas:</h3>
+        <ul>
+            {% for g in pack %}
+                <li>{{ g.nick }} - {{ g.numero }}</li>
+            {% endfor %}
+        </ul>
+
+        <p><a href="{% url "pagina_cadastro" %}">Ir para formulário de encomendas</a></p>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    {{ hacker.as_p }}
+    <button type="submit">Salvar</button>
+    <button type="reset" onclick="resetForm()">Cancelar</button>
+</form>

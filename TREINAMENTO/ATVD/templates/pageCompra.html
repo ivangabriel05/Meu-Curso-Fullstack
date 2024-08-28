@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h3>Formulário de Compras</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ compras.as_p }}
+            <button type="submit">Salvar</button>
+            <button type="reset" onclick="resetForm()">Cancelar</button>
+        </form>
+        
+    </body>
+</html> 

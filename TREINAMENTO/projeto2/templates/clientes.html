@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CLIENTES</title>
+    </head>
+    <body>
+        <a href="{% url "pg_index" %}">
+            <butoon>VOLTAR</butoon>
+        </a>
+        
+        <br>
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ clientes.as_p }}
+            <button type="button">Cancelar</button>
+            <button type="submit">Salvar</button>
+
+            <br>
+            
+        </form>
+    </body>
+</html>
+
+

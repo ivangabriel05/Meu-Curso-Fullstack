@@ -1,0 +1,9 @@
+{% extends 'base1.html' %}
+{% block content %}
+ <h2>{{ object.nome }}</h2>
+ <p>{{ object.descricao }}</p>
+ <p>Preço: {{ object.preco }}</p>
+ <p>Criado em: {{ object.criado_em }}</p>
+ <a href="{% url 'item-edit' object.pk %}">Editar</a>
+ <a href="{% url 'item-delete' object.pk %}">Excluir</a>
+{% endblock %}

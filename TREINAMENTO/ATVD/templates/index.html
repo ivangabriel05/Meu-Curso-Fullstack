@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h3>Lista de compras:</h3>
+        <ul>
+            {% for gg in tabela %}
+                <li>{{ gg.nome_item }} - {{ gg.numero }}</li>
+            {% endfor %}
+        </ul>
+
+        <p><a href="{% url "pagina_compras" %}">Ir para as compras</a></p>
+    </body>
+</html>

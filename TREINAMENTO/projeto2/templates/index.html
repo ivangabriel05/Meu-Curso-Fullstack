@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Inicial</title>
+    </head>
+    <body>
+            <a href="{% url "pg_hacker" %}">
+                <butoon>PAGINA HACKER</butoon>
+            </a>
+            <br>
+            <a href="{% url "pg_clientes" %}">
+                <butoon>PAGINA CLIENTES</butoon>
+            </a>
+            <br>
+            <a href="{% url "pg_servicos" %}">
+                <butoon>PAGINA SERVIÇOS</butoon>
+            </a>
+            <br>
+
+            <h3>Lista De Serviços</h3>
+
+            <ul>
+                {% for x in lista %}
+                    <li> {{ x.servico }} - {{x.descricao}} - {{x.tomador}} - {{x.cliente}} </li>
+                {% endfor %} 
+            </ul> 
+    </body>
+</html>

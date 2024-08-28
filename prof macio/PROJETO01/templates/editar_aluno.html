@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Aluno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-5">Editar Aluno</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="inputNome">Nome do Aluno</label>
+            <input type="text" class="form-control" id="inputNome" name="nome" value="{{ aluno.nome }}" required>
+        </div>
+        <div class="form-group">
+            <label for="inputEstado">Estado</label>
+            <input type="text" class="form-control" id="inputEstado" name="estado" value="{{ aluno.estado }}" required>
+        </div>
+        <div class="form-group">
+            <label for="inputCidade">Cidade</label>
+            <input type="text" class="form-control" id="inputCidade" name="cidade" value="{{ aluno.cidade }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    </form>
+</div>
+</body>
+</html>

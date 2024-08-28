@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+    </div>
+    <div class="col-md-12">
+        <form id="formulario">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione a Cidade</option>
+                <option value="PI">Piauí</option>
+                <option value="MA">Maranhão</option>
+                <!-- Adicione outras opções de estado conforme necessário -->
+            </select>
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" name="cidade">
+                <option value="">Selecione uma cidade</option>
+            </select>
+        </form>
+    </div>
+
+    <script>
+        // Função de busca de cidades utilizando o BrasilAPI usando JAVASCRIPT
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const estadoSelect = document.getElementById('estado');
+            const cidadeSelect = document.getElementById('cidade');
+        
+            estadoSelect.addEventListener('change', function () {
+                const uf = estadoSelect.value;
+        
+                // Limpa as opções anteriores do select de cidades
+                cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>';
+                // Verifica se uma sigla de estado foi selecionada
+                if (uf) {
+                    // Faz a requisição para o BrasilAPI
+                    fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${uf}`)
+                        .then(response => response.json())
+                        .then(cidades => {
+                            // Preenche o select de cidades com as opções retornadas
+                            cidades.forEach(cidade => {
+                                const option = document.createElement('option');
+                                option.value = cidade.nome;
+                                option.textContent = cidade.nome;
+                                cidadeSelect.appendChild(option);
+                            });
+                        });
+                }
+            });
+        });
+        </script>
+        
+    
+</body>
+</html>

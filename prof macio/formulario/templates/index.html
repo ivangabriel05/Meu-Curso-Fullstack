@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listagem de Alunos</title>
+</head>
+<body>
+    <h1>Lista de Alunos</h1>
+    
+    <form method="post" action="{% url 'adicionar_aluno' %}">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div>
+            {{ form.nome.label_tag }} {{ form.nome }}
+            {{ form.nome.errors }}
+        </div>
+        <div>
+            {{ form.estado.label_tag }} 
+            <select name="estado">
+                {% for sigla, nome in form.estado.field.choices %}
+                    <option value="{{ sigla }}">{{ nome }}</option>
+                {% endfor %}
+            </select>
+            {{ form.estado.errors }}
+        </div>
+        <div>
+            {{ form.municipio.label_tag }}
+            <select name="municipio">
+                {% for ibge_id, nome in form.municipio.field.choices %}
+                    <option value="{{ ibge_id }}">{{ nome }}</option>
+                {% endfor %}
+            </select>
+            {{ form.municipio.errors }}
+        </div>
+        <button type="submit">Adicionar Aluno</button>
+    </form>
+
+    <h2>Alunos Cadastrados</h2>
+    <ul>
+        {% for aluno in alunos %}
+            <li>
+                {{ aluno.nome }} - {{ aluno.estado }} - {{ aluno.municipio }}
+                <form method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" name="delete" value="{{ aluno.id }}">Excluir</button>
+                </form>
+            </li>
+        {% empty %}
+            <li>Nenhum aluno cadastrado.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

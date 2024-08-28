@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+    </div>
+    <div class="col-md-12">
+        <form id="formulario">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione o Estado</option>
+                <option value="PI">Piauí</option>
+                <option value="MA">Maranhão</option>
+                <!-- Adicione outras opções de estado conforme necessário -->
+            </select>
+            <label for="cidade">Cidade:</label>
+            <select id="cidade" name="cidade">
+                <option value="">Selecione uma cidade</option>
+            </select>
+        </form>
+        <div class="button-container">
+            <button id="editar">Editar</button>
+            <button id="excluir">Excluir</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const estadoSelect = document.getElementById('estado');
+            const cidadeSelect = document.getElementById('cidade');
+        
+            estadoSelect.addEventListener('change', function () {
+                const uf = estadoSelect.value;
+        
+                // Limpa as opções anteriores do select de cidades
+                cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>';
+                // Verifica se uma sigla de estado foi selecionada
+                if (uf) {
+                    // Faz a requisição para o BrasilAPI
+                    fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${uf}`)
+                        .then(response => response.json())
+                        .then(cidades => {
+                            // Preenche o select de cidades com as opções retornadas
+                            cidades.forEach(cidade => {
+                                const option = document.createElement('option');
+                                option.value = cidade.nome;
+                                option.textContent = cidade.nome;
+                                cidadeSelect.appendChild(option);
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Erro ao buscar cidades:', error);
+                        });
+                }
+            });
+
+            // Função para editar a seleção
+            document.getElementById('editar').addEventListener('click', function () {
+                const estado = estadoSelect.value;
+                const cidade = cidadeSelect.value;
+                if (estado && cidade) {
+                    alert(`Editando: Estado - ${estado}, Cidade - ${cidade}`);
+                } else {
+                    alert('Selecione um estado e uma cidade para editar.');
+                }
+            });
+
+            // Função para excluir a seleção
+            document.getElementById('excluir').addEventListener('click', function () {
+                estadoSelect.value = '';
+                cidadeSelect.innerHTML = '<option value="">Selecione uma cidade</option>';
+                alert('Seleção excluída.');
+            });
+        });
+    </script>
+</body>
+</html>

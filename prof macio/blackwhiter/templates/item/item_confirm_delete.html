@@ -1,0 +1,10 @@
+{% extends 'base1.html' %}
+{% block content %}
+ <h2>Confirmar Exclusão</h2>
+ <p>Tem certeza que deseja excluir "{{ object.nome }}"?</p>
+ <form method="post">
+ {% csrf_token %}
+ <button type="submit">Sim, excluir</button>
+ <a href="{% url 'item-list' %}">Cancelar</a>
+ </form>
+{% endblock %}

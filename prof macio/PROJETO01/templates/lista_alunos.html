@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-5">Lista de Alunos</h2>
+    <a href="{% url 'cadastro_aluno' %}" class="btn btn-primary my-3">Novo Cadastro</a>
+    <ul class="list-group">
+        {% for aluno in alunos %}
+            <li class="list-group-item">
+                Nome: {{ aluno.nome }} - Estado: {{ aluno.estado }} - Cidade: {{ aluno.cidade }}
+                <div class="float-right">
+                    <a href="{% url 'editar_aluno' aluno.id %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'excluir_aluno' aluno.id %}" class="btn btn-danger btn-sm">Excluir</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

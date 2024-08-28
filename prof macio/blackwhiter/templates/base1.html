@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --background-color: #F5F7FA;
+            --text-color: #34495E;
+            --button-hover-color: #357ABD;
+            --danger-color: #E74C3C;
+            --warning-color: #F39C12;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #3CBBAF;
+        }
+
+        #cadastros {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: none; /* Ocultando os cadastros por padrão */
+        }
+
+        .list-group-item {
+            background-color: #ECF0F1;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background-color: #D0D3D4;
+        }
+
+        .btn-warning {
+            background-color: var(--warning-color);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            background-color: #D68910;
+        }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-danger:hover {
+            background-color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="form-header">
+        <h2>Cadastro de Aluno</h2>
+    </div>
+    <form id="cadastroForm">
+        <div class="form-group">
+            <label for="inputNome">Nome do Aluno</label>
+            <input type="text" class="form-control" id="inputNome" placeholder="Digite o nome do aluno" required>
+            <div class="invalid-feedback">
+                Por favor, insira o nome do aluno.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputEstado">Estado</label>
+            <select class="form-control" id="inputEstado" required>
+                <option disabled selected value="">Selecione o estado...</option>
+                <option value="PI">Piauí</option>
+                <option value="MA">Maranhão</option>
+                <!-- Adicione mais estados conforme necessário -->
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecione um estado.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputCidade">Cidade</label>
+            <select class="form-control" id="inputCidade" required>
+                <option disabled selected value="">Selecione a cidade...</option>
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecione uma cidade.
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Cadastrar</button>
+    </form>
+
+    <button class="btn btn-secondary" id="verCadastrosBtn">Ver Cadastros</button>
+
+    <div id="cadastros">
+        <h4>Cadastros Realizados:</h4>
+        <ul id="listaCadastros" class="list-group">
+            <!-- Cadastros serão exibidos aqui -->
+        </ul>
+    </div>
+</div>
+
+<script>
+    async function buscarCidades(uf) {
+        const response = await fetch(`https://brasilapi.com.br/api/ibge/municipios/v1/${uf}`);
+        const cidades = await response.json();
+        const cidadeSelect = document.getElementById('inputCidade');
+        
+        cidadeSelect.innerHTML = '<option disabled selected value="">Selecione a cidade...</option>';
+
+        cidades.forEach(cidade => {
+            const option = document.createElement('option');
+            option.value = cidade.nome;
+            option.textContent = cidade.nome;
+            cidadeSelect.appendChild(option);
+        });
+    }
+    
+    document.getElementById('inputEstado').addEventListener('change', function () {
+        const estadoSelecionado = this.value;
+        if (estadoSelecionado) {
+            buscarCidades(estadoSelecionado);
+        }
+    });
+
+    const cadastros = [];
+    let cadastroEditando = null;
+
+    document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        
+        const nome = document.getElementById('inputNome').value;
+        const estado = document.getElementById('inputEstado').value;
+        const cidade = document.getElementById('inputCidade').value;
+
+        if (cadastroEditando !== null) {
+            cadastros[cadastroEditando] = { nome, estado, cidade };
+            cadastroEditando = null;
+        } else {
+            const cadastro = { nome, estado, cidade };
+            cadastros.push(cadastro);
+        }
+
+        alert('Cadastro realizado com sucesso!');
+        this.reset();
+        atualizarListaCadastros();
+    });
+
+    function atualizarListaCadastros() {
+        const listaCadastros = document.getElementById('listaCadastros');
+        listaCadastros.innerHTML = '';
+
+        if (cadastros.length === 0) {
+            listaCadastros.innerHTML = '<li class="list-group-item">Nenhum cadastro realizado.</li>';
+        } else {
+            cadastros.forEach((cadastro, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.textContent = `Nome: ${cadastro.nome}, Estado: ${cadastro.estado}, Cidade: ${cadastro.cidade}`;
+
+                const btnGroup = document.createElement('div');
+                btnGroup.className = 'btn-group';
+
+                const btnEditar = document.createElement('button');
+                btnEditar.className = 'btn btn-sm btn-warning';
+                btnEditar.textContent = 'Editar';
+                btnEditar.addEventListener('click', () => editarCadastro(index));
+
+                const btnExcluir = document.createElement('button');
+                btnExcluir.className = 'btn btn-sm btn-danger';
+                btnExcluir.textContent = 'Excluir';
+                btnExcluir.addEventListener('click', () => excluirCadastro(index));
+
+                btnGroup.appendChild(btnEditar);
+                btnGroup.appendChild(btnExcluir);
+
+                listItem.appendChild(btnGroup);
+                listaCadastros.appendChild(listItem);
+            });
+        }
+    }
+
+    function editarCadastro(index) {
+        const cadastro = cadastros[index];
+        document.getElementById('inputNome').value = cadastro.nome;
+        document.getElementById('inputEstado').value = cadastro.estado;
+        buscarCidades(cadastro.estado).then(() => {
+            document.getElementById('inputCidade').value = cadastro.cidade;
+        });
+        cadastroEditando = index;
+    }
+
+    function excluirCadastro(index) {
+        if (confirm('Tem certeza que deseja excluir este cadastro?')) {
+            cadastros.splice(index, 1);
+            atualizarListaCadastros();
+        }
+    }
+
+    document.getElementById('verCadastrosBtn').addEventListener('click', function () {
+        const cadastrosDiv = document.getElementById('cadastros');
+        if (cadastrosDiv.style.display === 'none' || cadastrosDiv.style.display === '') {
+            cadastrosDiv.style.display = 'block';
+        } else {
+            cadastrosDiv.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
